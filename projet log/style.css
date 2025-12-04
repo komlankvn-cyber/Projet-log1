@@ -1,0 +1,278 @@
+/* ---------------------------------------------------- */
+/* --- RESET ET STRUCTURE GLOBALE (STICKY FOOTER) --- */
+/* ---------------------------------------------------- */
+
+* {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 600;
+    /* Ajout du box-sizing pour un meilleur contrôle des largeurs */
+    box-sizing: border-box;
+}
+
+/* LA CLÉ DU STICKY FOOTER */
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #f5f6fa;
+    color: #1f1f1f;
+    display: flex;
+    flex-direction: column; /* Organise header, main, footer verticalement */
+}
+
+main {
+    flex-grow: 1; /* Pousse le footer vers le bas */
+}
+
+/* ---------------------------------------------------- */
+/* --- HEADER ET FOOTER (Styles conservés) --- */
+/* ---------------------------------------------------- */
+
+nav img {
+    height: 50px;
+}
+
+/* ALLIGNER TOUT SUR LA BANNIER */
+nav,
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    color: #ffffff;
+}
+
+nav {
+    background-color: #0052cc;
+    min-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-bottom: 50px;
+}
+
+ul li {
+    list-style-type: none;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 4px 0;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background: #edeef0; /* couleur du trait */
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+footer {
+    border-top: dotted 1px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: #e8fff3;
+    display: flex;
+    justify-content: center;
+    background-color: #0052cc;
+}
+
+/* ---------------------------------------------------- */
+/* --- INDEX.HTML (CARDS & GRAPH) (Styles conservés) --- */
+/* ---------------------------------------------------- */
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: auto;
+    gap: 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    border: solid rgb(54, 141, 212) 1px;
+    width: 20%;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #f5f6fa;
+    background-color: #0c65ca;
+}
+
+.graf {
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.box:hover {
+    transform: scale(1.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------------------------------------------------- */
+/* --- COMMANDES.HTML (TABLEAU) (Styles conservés) --- */
+/* ---------------------------------------------------- */
+
+.titre {
+    margin-left: 0.5%;
+    border: solid;
+    padding: 10px;
+    background-color: #2c3e50;
+    color: #e8fff3;
+    border-radius: 10px;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+.tableau {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+}
+
+.tableau thead tr {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.tableau td,
+.tableau th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.tableau tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.statrouge {
+    background-color: #e74c3c;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+.statvert {
+    background-color: #27ae60;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+.statorange {
+    background-color: #e67e22;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* ---------------------------------------------------- */
+/* --- TRANSPORTEUR.HTML (MODIFIÉ POUR ADAPTATIF) --- */
+/* ---------------------------------------------------- */
+
+.wrap {
+    margin: 50px auto; /* Centrage horizontal */
+    display: flex;
+    /* CHANGÉ: Par défaut en ligne pour les écrans larges */
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(236, 236, 235);
+    min-height: 300px;
+    width: 80%;
+    border-radius: 10px;
+    gap: 20px;
+    /* AJOUTÉ: Padding pour l'esthétique intérieure */
+    padding: 20px;
+}
+
+/* Rends les colonnes flexibles et égales (1:1) */
+main .column {
+    margin-top: 10px;
+    /* AJOUTÉ: Propriétés Flexbox pour l'adaptabilité */
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Chaque colonne prend la moitié de l'espace dans .wrap */
+}
+
+/* Rends les ARM adaptatifs à 100% de leur colonne */
+.arm1 {
+    border-top: solid rgb(136, 136, 216) 20px;
+    margin-bottom: 20px;
+    min-width: 200px;
+    /* AJOUTÉ: L'élément clé de l'adaptabilité proportionnelle */
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.arm1 p {
+    margin-bottom: 10px;
+}
+.arm2 {
+    border-top: solid rgb(136, 136, 216) 20px;
+    margin-bottom: 20px;
+    min-width: 200px;
+    /* AJOUTÉ: L'élément clé de l'adaptabilité proportionnelle */
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.arm2 p {
+    margin-bottom: 10px;
+}
+
+/* ---------------------------------------------------- */
+/* --- RESPONSIVE DESIGN (@media) --- */
+/* ---------------------------------------------------- */
+
+/* Pour les petits écrans (smartphones - sous 768px de largeur) */
+@media (max-width: 768px) {
+    /* MODIFICATION CLÉ: Les deux colonnes passent l'une en dessous de l'autre */
+    .wrap {
+        flex-direction: column;
+        width: 95%; /* Occupe plus de place sur mobile */
+    }
+
+    /* Le .column n'a plus besoin de flex: 1 dans cette configuration */
+    main .column {
+        flex: auto;
+    }
+
+    /* Les styles des .cards, .box, .stat* NE SONT PAS modifiés */
+}
