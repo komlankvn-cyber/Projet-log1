@@ -3,68 +3,44 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>commandes</title>
+        <title>Commandes</title>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <header>
-            <nav>
+            <nav class="container">
                 <a href="/index.html">
-                    <img src="/images/logistique-de-livraison.png" alt="logo entreprise" class="logo" />
+                    <img src="/images/logistique-de-livraison.png" alt="logo entreprise" class="logo" decoding="async" />
                 </a>
                 <ul>
-                    <li><a href="commandes.html" rel="noopener noreferrer">commandes</a></li>
-                    <li><a href="/transporteur.html" rel="noopener noreferrer">transporteur</a></li>
+                    <li><a href="commandes.html">Commandes</a></li>
+                    <li><a href="/transporteur.html">Transporteur</a></li>
                 </ul>
-                <a href=""><img src="/images/utilisateur.png" alt="Profil" /></a>
+                <a href=""><img src="/images/utilisateur.png" alt="Profil" decoding="async" /></a>
             </nav>
         </header>
-        <main>
+        <main class="container">
             <span class="titre">COMMANDES</span>
-            <table class="tableau">
-                <thead>
-                    <tr>
-                        <td>ID COMMANDES</td>
-                        <td>CLIENT</td>
-                        <td>STATUTS</td>
-                    </tr>
-                </thead>
-                <tr>
-                    <td>#C-1001</td>
-                    <td>DUPONT. S</td>
-                    <td><span class="statrouge">Retardé</span></td>
-                </tr>
-                <tr>
-                    <td>#C-1002</td>
-                    <td>DUPONT. S</td>
-                    <td><span class="statvert">Livré</span></td>
-                </tr>
-                <tr>
-                    <td>Martin. P</td>
-                    <td>Martin. P</td>
-                    <td><span class="statorange">En transit</span></td>
-                </tr>
-                <tr>
-                    <td>Durand. J</td>
-                    <td>Durand. J</td>
-                    <td><span class="statrouge">Retardé</span></td>
-                </tr>
-                <tr>
-                    <td>Mourau. S</td>
-                    <td>Mourau. S</td>
-                    <td><span class="statvert">Livré</span></td>
-                </tr>
-                <tr>
-                    <td>Peth A1000</td>
-                    <td>Morau. J</td>
-                    <td><span class="statvert">Livré</span></td>
-                </tr>
-                <tr>
-                    <td>#Ch 2005</td>
-                    <td>Petit. A</td>
-                    <td><span class="statrouge">Retardé</span></td>
-                </tr>
-            </table>
+            <div class="tableau-responsive">
+                <table class="tableau">
+                    <thead>
+                        <tr>
+                            <td>ID COMMANDES</td>
+                            <td>CLIENT</td>
+                            <td>STATUTS</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>#C-1001</td><td>DUPONT. S</td><td><span class="statrouge">Retardé</span></td></tr>
+                        <tr><td>#C-1002</td><td>DUPONT. S</td><td><span class="statvert">Livré</span></td></tr>
+                        <tr><td>#C-1003</td><td>Martin. P</td><td><span class="statorange">En transit</span></td></tr>
+                        <tr><td>#C-1004</td><td>Durand. J</td><td><span class="statrouge">Retardé</span></td></tr>
+                        <tr><td>#C-1005</td><td>Mourau. S</td><td><span class="statvert">Livré</span></td></tr>
+                        <tr><td>#C-1006</td><td>Peth A1000</td><td><span class="statvert">Livré</span></td></tr>
+                        <tr><td>#C-1007</td><td>#Ch 2005</td><td><span class="statrouge">Retardé</span></td></tr>
+                        </tbody>
+                </table>
+            </div>
         </main>
         <footer>
             <p>&copy; 2025 Kev log. Spécialiste en Logistique. Tous droits réservés.</p>
