@@ -3,32 +3,34 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Transport</title>
+        <title>Transport - Tableau de Bord</title>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <header>
-            <nav>
-                <img src="/images/logistique-de-livraison.png" alt="logo entreprise" class="logo" />
+            <nav class="container">
+                <a href="/index.html">
+                    <img src="/images/logistique-de-livraison.png" alt="logo entreprise" class="logo" decoding="async" />
+                </a>
                 <ul>
-                    <li><a href="commandes.html" rel="noopener noreferrer">commandes</a></li>
-                    <li><a href="/transporteur.html" rel="noopener noreferrer">transporteur</a></li>
+                    <li><a href="commandes.html">Commandes</a></li>
+                    <li><a href="/transporteur.html">Transporteur</a></li>
                 </ul>
-                <img src="/images/utilisateur.png" alt="Profil" />
+                <img src="/images/utilisateur.png" alt="Profil" decoding="async" />
             </nav>
         </header>
         <main>
-            <section class="cards">
+            <section class="cards container">
                 <div class="box slide-fwd-center">
-                    <p>stock actuel</p>
+                    <p>Stock actuel</p>
                     <p>🏠 1.250</p>
                 </div>
                 <div class="box slide-fwd-center">
-                    <p>commandes en attente</p>
+                    <p>Commandes en attente</p>
                     <p>⏳ 45</p>
                 </div>
                 <div class="box slide-fwd-center">
-                    <p>transporteurs actifs</p>
+                    <p>Transporteurs actifs</p>
                     <p>🚚 12</p>
                 </div>
                 <div class="box slide-fwd-center">
@@ -36,9 +38,9 @@
                     <p>👍 98.5%</p>
                 </div>
             </section>
-            <section>
+            <section class="container graph-section">
                 <div class="graph">
-                    <img src="/images/graphique.jpg" alt="graphique recap" class="graf" />
+                    <img src="/images/graphique.jpg" alt="graphique recap" class="graf" loading="lazy" decoding="async" />
                 </div>
             </section>
         </main>
